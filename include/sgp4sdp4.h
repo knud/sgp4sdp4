@@ -5,6 +5,8 @@
 #ifndef KELSO_H
 #define KELSO_H 1
 
+#define __USE_GNU
+
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -13,6 +15,7 @@
 #include <sys/time.h>
 #include <unistd.h>
 #include <ctype.h>
+#include <stdint.h>
 
 /** Type definitions **/
 
@@ -164,6 +167,7 @@ int Good_Elements(char *tle_set);
 void Convert_Satellite_Data(char *tle_set, tle_t *tle);
 int Input_Tle_Set(char *tle_file, tle_t *tle);
 void select_ephemeris(tle_t *tle);
+int get_current_tle(uint32_t catalog_number, tle_t *record);
 /* sgp_math.c */
 int Sign(double arg);
 double Sqr(double arg);

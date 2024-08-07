@@ -10,18 +10,38 @@
  */
 
 #define SGP4SDP4_CONSTANTS
-#include "sgp4sdp4.h"
+#include "include/sgp4sdp4.h"
+#include <time.h>
+
+#define __USE_GNU
+#define __USE_MATH_DEFINES
+#define __USE_XOPEN
+#include <math.h>
+
+#include "include/tle_utils.h"
 
 /* Main program */
-  int
-main(void)
+int main(void)
 {
   /* TLE source file */
-  char tle_file[] = "./amateur.txt";
+//  char tle_file[] = "./amateur.txt";
 
+  uint32_t satCatNum = 25445;
+
+  double obs_lat;  // observer latitude in degrees
+  double obs_long; // observer longitude in degrees (-ve west, +ve east)
+  double obs_alt; // observer altitude in meters
+
+  obs_lat = 53.7694;
+  obs_long = -113.4560;
+  obs_alt = 701;
+
+  if (obs_long < 0) {
+	  obs_long += 360;
+  }
   /* Observer's geodetic co-ordinates.      */
   /* Lat North, Lon East in rads, Alt in km */
-  geodetic_t obs_geodetic = {0.6056, 0.5761, 0.15, 0.0};
+  geodetic_t obs_geodetic = {obs_lat*M_PI/180.0, obs_long*M_PI/180.0, obs_alt/1000, 0.0};
 
   /* Two-line Orbital Elements for the satellite */
   tle_t tle ;
@@ -37,7 +57,7 @@ main(void)
 
   /* Solar ECI position vector  */
   vector_t solar_vector = zero_vector;
-  /* Solar observed azi and ele vector  */
+  /* Solar obse#include rved azi and ele vector  */
   vector_t solar_set;
 
   /* Calendar date and time (UTC) */
@@ -66,15 +86,15 @@ main(void)
 	ephem[5],       /* Ephemeris in use string  */
 	sat_status[12]; /* Satellite eclipse status */
 
-
   /* Input one (first!) TLE set from file */
-  flg = Input_Tle_Set(tle_file, &tle);
+//  flg = Input_Tle_Set(tle_file, &tle);
+
+  flg = get_current_tle(satCatNum, &tle);
 
   /* Abort if file open fails */
-  if( flg == -1 )
-  {
-	printf(" File open failed - Exiting!\n");
-	exit(-1);
+  if( flg < 0 ) {
+  	printf(" Fetching current TLE for Satellite Catalog number %d failed - Exiting!\n", satCatNum);
+    exit(-1);
   }
 
   /* Print satellite name and TLE read status */
@@ -86,15 +106,6 @@ main(void)
   }
   else
 	printf("TLE set good - Happy Tracking!\n");
-
-  /* Printout of tle set data for tests if needed */
-  /*  printf("\n %s %s %i  %i  %i\n"
-	  " %14f %10f %8f %8f\n"
-	  " %8f %8f %9f %8f %8f %12f\n",
-	  tle.sat_name, tle.idesg, tle.catnr, tle.elset, tle.revnum,
-	  tle.epoch, tle.xndt2o, tle.xndd6o, tle.bstar,
-	  tle.xincl, tle.xnodeo, tle.eo, tle.omegao, tle.xmo, tle.xno);
-   */
 
   /** !Clear all flags! **/
   /* Before calling a different ephemeris  */
@@ -110,8 +121,10 @@ main(void)
   /* must be called each time a new tle set is used    */
   select_ephemeris(&tle);
 
-  do  /* Loop */
-  {
+  // Set sampling rate aka delay between orbital parameter updates
+  struct timespec delay = {.tv_sec = 1, .tv_nsec = 100000000 };
+
+  while (1) {
 	/* Get UTC calendar and convert to Julian */
 	UTC_Calendar_Now(&utc, &tv);
 	jul_utc = Julian_Date(&utc, &tv);
@@ -178,7 +191,7 @@ main(void)
 	printf("\n Date: %02d/%02d/%04d UTC: %02d:%02d:%02d  Ephemeris: %s"
 		"\n Azi=%6.1f Ele=%6.1f Range=%8.1f Range Rate=%6.2f"
 		"\n Lat=%6.1f Lon=%6.1f  Alt=%8.1f  Vel=%8.3f"
-		"\n Stellite Status: %s - Depth: %2.3f"
+		"\n Satellite Status: %s - Depth: %2.3f"
 		"\n Sun Azi=%6.1f Sun Ele=%6.1f\n",
 		utc.tm_mday, utc.tm_mon, utc.tm_year,
 		utc.tm_hour, utc.tm_min, utc.tm_sec, ephem,
@@ -187,9 +200,9 @@ main(void)
 		sat_status, eclipse_depth,
 		sun_azi, sun_ele);
 
-	usleep(1e5);
-  }  /* End of do */
-  while( 1 );
+    // delay until next orbital parameter update
+    nanosleep(&delay, NULL);
+  }  // while
 
 } /* End of main() */
 

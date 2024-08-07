@@ -6,9 +6,18 @@
 /*        Copyright:  1992-1999, All Rights Reserved */
 
 /* Ported to C by N. Kyriazis  April 6  2001 */
+// #include <stdio.h>
+// #include <unistd.h>
+// #include <string.h>
+// #include <sys/socket.h>
+// #include <netinet/in.h>
+// #include <netdb.h>
 
+#include <curl/curl.h>
 #define SGP4SDP4_CONSTANTS
 #include "sgp4sdp4.h"
+
+#define UNUSED(expr) do { (void)(expr); } while (0)
 
 /* Calculates the checksum mod 10 of a line from a TLE set and */
 /* returns 1 if it compares with checksum in column 68, else 0.*/
@@ -184,6 +193,9 @@ Input_Tle_Set( char *tle_file, tle_t *tle)
   char sat_name[sizeof(tle->sat_name)]; /* Temp var for satellite name */
   char tle_set[139]; /* Two lines of a TLE set */
 
+  char* fgetsRet;
+  UNUSED(fgetsRet);
+
   /* File pointer for opening TLE source file */
   FILE *fp;
 
@@ -192,19 +204,19 @@ Input_Tle_Set( char *tle_file, tle_t *tle)
 	return(-1);
 
   /* Read the satellite's name */
-  fgets(sat_name, sizeof(sat_name), fp);
+  fgetsRet = fgets(sat_name, sizeof(sat_name), fp);
   strncpy(tle->sat_name, sat_name, sizeof(tle->sat_name));
   tle->sat_name[sizeof(tle->sat_name)-1] = 0;
 
   /* Read in first line of TLE set */
-  fgets( tle_set, 70, fp );
+  fgetsRet = fgets( tle_set, 70, fp );
 
   /* Dump CR/LF, put back last character */
   while( ((chr = fgetc(fp)) == CR) || (chr == LF) );
   ungetc(chr,fp);
 
   /* Read in second line of TLE set and terminate string */
-  fgets( &tle_set[69], 70, fp );
+  fgetsRet = fgets( &tle_set[69], 70, fp );
   tle_set[138]='\0';
 
   fclose(fp);
@@ -265,3 +277,94 @@ select_ephemeris(tle_t *tle)
 
 /*------------------------------------------------------------------*/
 
+
+// must return the number of bytes consumed/handled
+size_t write_data(void *buffer, size_t size, size_t nmemb, void *userp) {
+
+  UNUSED(size);
+  tle_t *tle = (tle_t *)userp;
+  char tle_set[139]; /* Two lines of a TLE set */
+  char *b = (char*)buffer;
+
+  // Get the title line
+  size_t idx = 0;
+  size_t j = 0;
+  // Read until all characters are read or CR is found
+  while (idx < nmemb && b[idx] != 0x0d) {
+    tle->sat_name[j++] = b[idx++];
+  }
+  
+  // check if an 0x0a follows the 0x0d delimiter.
+  if (b[++idx] != 0x0a) {
+    return 0; // say no bytes processed
+  }
+
+  tle->sat_name[j] = '\0';
+//  printf("Satellite Name : %s\n",tle->sat_name);
+
+  idx++;
+  j = 0;
+  while (idx < nmemb && b[idx] != 0x0d) {
+    tle_set[j++] = b[idx++];
+  }
+  
+  // check if an 0x0a follows the 0x0d delimiter.
+  if (b[++idx] != 0x0a) {
+    return 0; // say no bytes processed
+  }
+
+  idx++;
+  while (idx < nmemb && b[idx] != 0x0d) {
+    tle_set[j++] = b[idx++];
+  }
+  
+  // check if an 0x0a follows the 0x0d delimiter.
+  if (b[idx+1] != 0x0a) {
+    return 0; // say no bytes processed
+  }
+  tle_set[j] = '\0';
+
+  /* Check TLE set and abort if not valid */
+  if( !Good_Elements(tle_set) )
+    return(-2);
+
+  /* Convert the TLE set to orbital elements */
+  Convert_Satellite_Data( tle_set, tle );
+
+  return nmemb;
+}
+
+int get_current_tle(uint32_t catalog_number, tle_t *record) {
+
+  CURL *curl;
+  CURLcode res;
+  char url[256];
+
+  int retVal = 11; // Negative values are a fail
+
+  char * url_fmt = "http://celestrak.org/NORAD/elements/gp.php?CATNR=%ld&FORMAT=TLE";
+  sprintf(url, url_fmt, catalog_number);
+
+  curl = curl_easy_init();
+  if (curl) {
+    curl_easy_setopt(curl, CURLOPT_URL, "http://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=TLE");
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
+    curl_easy_setopt(curl, CURLOPT_WRITEDATA, record);
+
+    res = curl_easy_perform(curl);
+
+    if(res == CURLE_OK) {
+      retVal = 1;
+    }
+    else {
+      printf("curl error\n");
+    }
+
+    curl_easy_cleanup(curl);
+  }
+  else {
+    printf("curl did not init\n");
+  }
+
+  return retVal;
+}
