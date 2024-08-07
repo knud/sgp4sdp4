@@ -1,0 +1,224 @@
+\doxysection{sgp4sdp4.\+h}
+\hypertarget{sgp4sdp4_8h_source}{}\label{sgp4sdp4_8h_source}\index{sgp4sdp4.h@{sgp4sdp4.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ \ Header\ file\ for\ kelso}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ KELSO\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ KELSO\_H\ 1}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <sys/time.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <ctype.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ Two-\/line-\/element\ satellite\ orbital\ data\ */}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00023\ \ \ \ \ epoch,\ xndt2o,\ xndd6o,\ bstar,}
+\DoxyCodeLine{00024\ \ \ \ \ xincl,\ xnodeo,\ eo,\ omegao,\ xmo,\ xno;}
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{int}}
+\DoxyCodeLine{00026\ \ \ \ \ catnr,\ \ \textcolor{comment}{/*\ Catalogue\ Number\ \ */}}
+\DoxyCodeLine{00027\ \ \ \ \ elset,\ \ \textcolor{comment}{/*\ Element\ Set\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00028\ \ \ \ \ revnum;\ \textcolor{comment}{/*\ Revolution\ Number\ */}}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{char}}
+\DoxyCodeLine{00030\ \ \ \ \ sat\_name[128],\ \textcolor{comment}{/*\ Satellite\ name\ string\ \ \ \ */}}
+\DoxyCodeLine{00031\ \ \ \ \ idesg[9];\ \ \ \ \ \textcolor{comment}{/*\ International\ Designator\ */}}
+\DoxyCodeLine{00032\ \}\ \mbox{\hyperlink{structtle__t}{tle\_t}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/*\ Geodetic\ position\ structure\ */}}
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00038\ \ \ \ \ lat,\ lon,\ alt,\ theta;}
+\DoxyCodeLine{00039\ \}\ \mbox{\hyperlink{structgeodetic__t}{geodetic\_t}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{/*\ General\ three-\/dimensional\ vector\ structure\ */}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00045\ \ \ \ \ x,\ y,\ z,\ w;}
+\DoxyCodeLine{00046\ \}\ \mbox{\hyperlink{structvector__t}{vector\_t}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{/*\ Common\ arguments\ between\ deep-\/space\ functions\ */}}
+\DoxyCodeLine{00049\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \textcolor{comment}{/*\ Used\ by\ dpinit\ part\ of\ Deep()\ */}}
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00053\ \ \ \ \ eosq,sinio,cosio,betao,aodp,theta2,sing,cosg,}
+\DoxyCodeLine{00054\ \ \ \ \ betao2,xmdot,omgdot,xnodot,xnodp;}
+\DoxyCodeLine{00055\ \ \ \textcolor{comment}{/*\ Used\ by\ dpsec\ and\ dpper\ parts\ of\ Deep()\ */}}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00057\ \ \ \ \ xll,omgadf,xnode,em,xinc,xn,t;}
+\DoxyCodeLine{00058\ \ \ \textcolor{comment}{/*\ Used\ by\ thetg\ and\ Deep()\ */}}
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00060\ \ \ \ \ ds50;}
+\DoxyCodeLine{00061\ \}\ \mbox{\hyperlink{structdeep__arg__t}{deep\_arg\_t}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#ifdef\ SGP4SDP4\_CONSTANTS}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ de2ra\ \ \ \ 1.74532925E-\/2\ \ \ }\textcolor{comment}{/*\ Degrees\ to\ Radians\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ pi\ \ \ \ \ \ \ 3.1415926535898\ }\textcolor{comment}{/*\ Pi\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ pio2\ \ \ \ \ 1.5707963267949\ }\textcolor{comment}{/*\ Pi/2\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ x3pio2\ \ \ 4.71238898\ \ \ \ \ \ }\textcolor{comment}{/*\ 3*Pi/2\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ twopi\ \ \ \ 6.2831853071796\ }\textcolor{comment}{/*\ 2*Pi\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ e6a\ \ \ \ \ \ 1.0E-\/6}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ tothrd\ \ \ 6.6666667E-\/1\ \ \ \ }\textcolor{comment}{/*\ 2/3\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ xj2\ \ \ \ \ \ 1.0826158E-\/3\ \ \ \ }\textcolor{comment}{/*\ J2\ Harmonic\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ xj3\ \ \ \ \ -\/2.53881E-\/6\ \ \ \ \ \ }\textcolor{comment}{/*\ J3\ Harmonic\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ xj4\ \ \ \ \ -\/1.65597E-\/6\ \ \ \ \ \ }\textcolor{comment}{/*\ J4\ Harmonic\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ xke\ \ \ \ \ \ 7.43669161E-\/2}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ xkmper\ \ \ 6.378135E3\ \ \ \ \ \ }\textcolor{comment}{/*\ Earth\ radius\ km\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ xmnpda\ \ \ 1.44E3\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Minutes\ per\ day\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ ae\ \ \ \ \ \ \ 1.0}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ ck2\ \ \ \ \ \ 5.413079E-\/4}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ ck4\ \ \ \ \ \ 6.209887E-\/7}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ f\ \ \ \ \ \ \ \ 3.352779E-\/3}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ ge\ \ \ \ \ \ \ 3.986008E5}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ s\ \ \ \ \ \ \ \ 1.012229}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ qoms2t\ \ \ 1.880279E-\/09}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ secday\ \ \ 8.6400E4\ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ Seconds\ per\ day\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ omega\_E\ \ 1.0027379}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ omega\_ER\ 6.3003879}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ zns\ \ \ \ \ \ 1.19459E-\/5}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ c1ss\ \ \ \ \ 2.9864797E-\/6}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ zes\ \ \ \ \ \ 1.675E-\/2}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ znl\ \ \ \ \ \ 1.5835218E-\/4}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ c1l\ \ \ \ \ \ 4.7968065E-\/7}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ zel\ \ \ \ \ \ 5.490E-\/2}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ zcosis\ \ \ 9.1744867E-\/1}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ zsinis\ \ \ 3.9785416E-\/1}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ zsings\ \ -\/9.8088458E-\/1}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ zcosgs\ \ \ 1.945905E-\/1}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ zcoshs\ \ \ 1}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ zsinhs\ \ \ 0}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ q22\ \ \ \ \ \ 1.7891679E-\/6}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ q31\ \ \ \ \ \ 2.1460748E-\/6}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ q33\ \ \ \ \ \ 2.2123015E-\/7}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ g22\ \ \ \ \ \ 5.7686396}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ g32\ \ \ \ \ \ 9.5240898E-\/1}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ g44\ \ \ \ \ \ 1.8014998}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ g52\ \ \ \ \ \ 1.0508330}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ g54\ \ \ \ \ \ 4.4108898}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ root22\ \ \ 1.7891679E-\/6}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ root32\ \ \ 3.7393792E-\/7}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ root44\ \ \ 7.3636953E-\/9}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ root52\ \ \ 1.1428639E-\/7}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ root54\ \ \ 2.1765803E-\/9}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ thdt\ \ \ \ \ 4.3752691E-\/3}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ rho\ \ \ \ \ \ 1.5696615E-\/1}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ mfactor\ \ 7.292115E-\/5}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ sr\ \ \ \ \ \ \ 6.96000E5\ \ \ \ \ \ }\textcolor{comment}{/*Solar\ radius\ -\/\ kilometers\ (IAU\ 76)*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ AU\ \ \ \ \ \ \ 1.49597870E8\ \ \ }\textcolor{comment}{/*Astronomical\ unit\ -\/\ kilometers\ (IAU\ 76)*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{comment}{/*\ Entry\ points\ of\ Deep()\ */}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ dpinit\ \ \ 1\ }\textcolor{comment}{/*\ Deep-\/space\ initialization\ code\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ dpsec\ \ \ \ 2\ }\textcolor{comment}{/*\ Deep-\/space\ secular\ code\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ dpper\ \ \ \ 3\ }\textcolor{comment}{/*\ Deep-\/space\ periodic\ code\ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{comment}{/*\ Carriage\ return\ and\ line\ feed\ */}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ CR\ \ 0x0A}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ LF\ \ 0x0D}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{comment}{/*\ Flow\ control\ flag\ definitions\ */}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ ALL\_FLAGS\ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/1}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ \ SGP\_INITIALIZED\_FLAG\ \ 0x000001}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ SGP4\_INITIALIZED\_FLAG\ \ 0x000002}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ SDP4\_INITIALIZED\_FLAG\ \ 0x000004}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ SGP8\_INITIALIZED\_FLAG\ \ 0x000008}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#define\ SDP8\_INITIALIZED\_FLAG\ \ 0x000010}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ SIMPLE\_FLAG\ \ \ \ \ \ \ \ \ \ \ \ 0x000020}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ DEEP\_SPACE\_EPHEM\_FLAG\ \ 0x000040}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ LUNAR\_TERMS\_DONE\_FLAG\ \ 0x000080}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ NEW\_EPHEMERIS\_FLAG\ \ \ \ \ 0x000100}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ DO\_LOOP\_FLAG\ \ \ \ \ \ \ \ \ \ \ 0x000200}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ RESONANCE\_FLAG\ \ \ \ \ \ \ \ \ 0x000400}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ SYNCHRONOUS\_FLAG\ \ \ \ \ \ \ 0x000800}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ EPOCH\_RESTART\_FLAG\ \ \ \ \ 0x001000}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ VISIBLE\_FLAG\ \ \ \ \ \ \ \ \ \ \ 0x002000}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ SAT\_ECLIPSED\_FLAG\ \ \ \ \ \ 0x004000}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{comment}{/*\ Funtion\ prototypes\ produced\ by\ cproto\ */}}
+\DoxyCodeLine{00151\ \textcolor{comment}{/*\ main.c\ */}}
+\DoxyCodeLine{00152\ \textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00153\ \textcolor{comment}{/*\ sgp4sdp4.c\ */}}
+\DoxyCodeLine{00154\ \textcolor{keywordtype}{void}\ SGP4(\textcolor{keywordtype}{double}\ tsince,\ \mbox{\hyperlink{structtle__t}{tle\_t}}\ *tle,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *pos,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *vel);}
+\DoxyCodeLine{00155\ \textcolor{keywordtype}{void}\ SDP4(\textcolor{keywordtype}{double}\ tsince,\ \mbox{\hyperlink{structtle__t}{tle\_t}}\ *tle,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *pos,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *vel);}
+\DoxyCodeLine{00156\ \textcolor{keywordtype}{void}\ Deep(\textcolor{keywordtype}{int}\ ientry,\ \mbox{\hyperlink{structtle__t}{tle\_t}}\ *tle,\ \mbox{\hyperlink{structdeep__arg__t}{deep\_arg\_t}}\ *deep\_arg);}
+\DoxyCodeLine{00157\ \textcolor{keywordtype}{int}\ isFlagSet(\textcolor{keywordtype}{int}\ flag);}
+\DoxyCodeLine{00158\ \textcolor{keywordtype}{int}\ isFlagClear(\textcolor{keywordtype}{int}\ flag);}
+\DoxyCodeLine{00159\ \textcolor{keywordtype}{void}\ SetFlag(\textcolor{keywordtype}{int}\ flag);}
+\DoxyCodeLine{00160\ \textcolor{keywordtype}{void}\ ClearFlag(\textcolor{keywordtype}{int}\ flag);}
+\DoxyCodeLine{00161\ \textcolor{comment}{/*\ sgp\_in.c\ */}}
+\DoxyCodeLine{00162\ \textcolor{keywordtype}{int}\ Checksum\_Good(\textcolor{keywordtype}{char}\ *tle\_set);}
+\DoxyCodeLine{00163\ \textcolor{keywordtype}{int}\ Good\_Elements(\textcolor{keywordtype}{char}\ *tle\_set);}
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{void}\ Convert\_Satellite\_Data(\textcolor{keywordtype}{char}\ *tle\_set,\ \mbox{\hyperlink{structtle__t}{tle\_t}}\ *tle);}
+\DoxyCodeLine{00165\ \textcolor{keywordtype}{int}\ Input\_Tle\_Set(\textcolor{keywordtype}{char}\ *tle\_file,\ \mbox{\hyperlink{structtle__t}{tle\_t}}\ *tle);}
+\DoxyCodeLine{00166\ \textcolor{keywordtype}{void}\ select\_ephemeris(\mbox{\hyperlink{structtle__t}{tle\_t}}\ *tle);}
+\DoxyCodeLine{00167\ \textcolor{comment}{/*\ sgp\_math.c\ */}}
+\DoxyCodeLine{00168\ \textcolor{keywordtype}{int}\ Sign(\textcolor{keywordtype}{double}\ arg);}
+\DoxyCodeLine{00169\ \textcolor{keywordtype}{double}\ Sqr(\textcolor{keywordtype}{double}\ arg);}
+\DoxyCodeLine{00170\ \textcolor{keywordtype}{double}\ Cube(\textcolor{keywordtype}{double}\ arg);}
+\DoxyCodeLine{00171\ \textcolor{keywordtype}{double}\ Radians(\textcolor{keywordtype}{double}\ arg);}
+\DoxyCodeLine{00172\ \textcolor{keywordtype}{double}\ Degrees(\textcolor{keywordtype}{double}\ arg);}
+\DoxyCodeLine{00173\ \textcolor{keywordtype}{double}\ ArcSin(\textcolor{keywordtype}{double}\ arg);}
+\DoxyCodeLine{00174\ \textcolor{keywordtype}{double}\ ArcCos(\textcolor{keywordtype}{double}\ arg);}
+\DoxyCodeLine{00175\ \textcolor{keywordtype}{void}\ Magnitude(\mbox{\hyperlink{structvector__t}{vector\_t}}\ *v);}
+\DoxyCodeLine{00176\ \textcolor{keywordtype}{void}\ Vec\_Add(\mbox{\hyperlink{structvector__t}{vector\_t}}\ *v1,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v2,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v3);}
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{void}\ Vec\_Sub(\mbox{\hyperlink{structvector__t}{vector\_t}}\ *v1,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v2,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v3);}
+\DoxyCodeLine{00178\ \textcolor{keywordtype}{void}\ Scalar\_Multiply(\textcolor{keywordtype}{double}\ k,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v1,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v2);}
+\DoxyCodeLine{00179\ \textcolor{keywordtype}{void}\ Scale\_Vector(\textcolor{keywordtype}{double}\ k,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v);}
+\DoxyCodeLine{00180\ \textcolor{keywordtype}{double}\ Dot(\mbox{\hyperlink{structvector__t}{vector\_t}}\ *v1,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v2);}
+\DoxyCodeLine{00181\ \textcolor{keywordtype}{double}\ Angle(\mbox{\hyperlink{structvector__t}{vector\_t}}\ *v1,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v2);}
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{void}\ Cross(\mbox{\hyperlink{structvector__t}{vector\_t}}\ *v1,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v2,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *v3);}
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ Normalize(\mbox{\hyperlink{structvector__t}{vector\_t}}\ *v);}
+\DoxyCodeLine{00184\ \textcolor{keywordtype}{double}\ AcTan(\textcolor{keywordtype}{double}\ sinx,\ \textcolor{keywordtype}{double}\ cosx);}
+\DoxyCodeLine{00185\ \textcolor{keywordtype}{double}\ FMod2p(\textcolor{keywordtype}{double}\ x);}
+\DoxyCodeLine{00186\ \textcolor{keywordtype}{double}\ Modulus(\textcolor{keywordtype}{double}\ arg1,\ \textcolor{keywordtype}{double}\ arg2);}
+\DoxyCodeLine{00187\ \textcolor{keywordtype}{double}\ Frac(\textcolor{keywordtype}{double}\ arg);}
+\DoxyCodeLine{00188\ \textcolor{keywordtype}{int}\ Round(\textcolor{keywordtype}{double}\ arg);}
+\DoxyCodeLine{00189\ \textcolor{keywordtype}{double}\ Int(\textcolor{keywordtype}{double}\ arg);}
+\DoxyCodeLine{00190\ \textcolor{keywordtype}{void}\ Convert\_Sat\_State(\mbox{\hyperlink{structvector__t}{vector\_t}}\ *pos,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *vel);}
+\DoxyCodeLine{00191\ \textcolor{comment}{/*\ sgp\_obs.c\ */}}
+\DoxyCodeLine{00192\ \textcolor{keywordtype}{void}\ Calculate\_User\_PosVel(\textcolor{keywordtype}{double}\ time,\ \mbox{\hyperlink{structgeodetic__t}{geodetic\_t}}\ *geodetic,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *obs\_pos,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *obs\_vel);}
+\DoxyCodeLine{00193\ \textcolor{keywordtype}{void}\ Calculate\_LatLonAlt(\textcolor{keywordtype}{double}\ time,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *pos,\ \mbox{\hyperlink{structgeodetic__t}{geodetic\_t}}\ *geodetic);}
+\DoxyCodeLine{00194\ \textcolor{keywordtype}{void}\ Calculate\_Obs(\textcolor{keywordtype}{double}\ time,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *pos,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *vel,\ \mbox{\hyperlink{structgeodetic__t}{geodetic\_t}}\ *geodetic,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *obs\_set);}
+\DoxyCodeLine{00195\ \textcolor{keywordtype}{void}\ Calculate\_RADec(\textcolor{keywordtype}{double}\ time,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *pos,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *vel,\ \mbox{\hyperlink{structgeodetic__t}{geodetic\_t}}\ *geodetic,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *obs\_set);}
+\DoxyCodeLine{00196\ \textcolor{comment}{/*\ sgp\_time.c\ */}}
+\DoxyCodeLine{00197\ \textcolor{keywordtype}{double}\ Julian\_Date\_of\_Epoch(\textcolor{keywordtype}{double}\ epoch);}
+\DoxyCodeLine{00198\ \textcolor{keywordtype}{double}\ Epoch\_Time(\textcolor{keywordtype}{double}\ jd);}
+\DoxyCodeLine{00199\ \textcolor{keywordtype}{int}\ DOY(\textcolor{keywordtype}{int}\ yr,\ \textcolor{keywordtype}{int}\ mo,\ \textcolor{keywordtype}{int}\ dy);}
+\DoxyCodeLine{00200\ \textcolor{keywordtype}{double}\ Fraction\_of\_Day(\textcolor{keywordtype}{int}\ hr,\ \textcolor{keywordtype}{int}\ mi,\ \textcolor{keywordtype}{int}\ se,\ suseconds\_t\ usec);}
+\DoxyCodeLine{00201\ \textcolor{keywordtype}{void}\ Calendar\_Date(\textcolor{keywordtype}{double}\ jd,\ \textcolor{keyword}{struct}\ tm\ *cdate);}
+\DoxyCodeLine{00202\ \textcolor{keywordtype}{void}\ Time\_of\_Day(\textcolor{keywordtype}{double}\ jd,\ \textcolor{keyword}{struct}\ tm\ *cdate);}
+\DoxyCodeLine{00203\ \textcolor{keywordtype}{double}\ Julian\_Date(\textcolor{keyword}{struct}\ tm\ *cdate,\ \textcolor{keyword}{struct}\ timeval\ *tv);}
+\DoxyCodeLine{00204\ \textcolor{keywordtype}{void}\ Date\_Time(\textcolor{keywordtype}{double}\ julian\_date,\ \textcolor{keyword}{struct}\ tm\ *cdate);}
+\DoxyCodeLine{00205\ \textcolor{keywordtype}{int}\ Check\_Date(\textcolor{keyword}{struct}\ tm\ *cdate);}
+\DoxyCodeLine{00206\ \textcolor{keyword}{struct\ }tm\ Time\_to\_UTC(struct\ tm\ *cdate);}
+\DoxyCodeLine{00207\ \textcolor{keyword}{struct\ }tm\ Time\_from\_UTC(struct\ tm\ *cdate);}
+\DoxyCodeLine{00208\ \textcolor{keywordtype}{double}\ JD\_to\_UTC(\textcolor{keywordtype}{double}\ jt);}
+\DoxyCodeLine{00209\ \textcolor{keywordtype}{double}\ JD\_from\_UTC(\textcolor{keywordtype}{double}\ jt);}
+\DoxyCodeLine{00210\ \textcolor{keywordtype}{double}\ Delta\_ET(\textcolor{keywordtype}{double}\ year);}
+\DoxyCodeLine{00211\ \textcolor{keywordtype}{double}\ Julian\_Date\_of\_Year(\textcolor{keywordtype}{double}\ year);}
+\DoxyCodeLine{00212\ \textcolor{keywordtype}{double}\ ThetaG(\textcolor{keywordtype}{double}\ epoch,\ \mbox{\hyperlink{structdeep__arg__t}{deep\_arg\_t}}\ *deep\_arg);}
+\DoxyCodeLine{00213\ \textcolor{keywordtype}{double}\ ThetaG\_JD(\textcolor{keywordtype}{double}\ jd);}
+\DoxyCodeLine{00214\ \textcolor{keywordtype}{void}\ UTC\_Calendar\_Now(\textcolor{keyword}{struct}\ tm\ *cdate,\ \textcolor{keyword}{struct}\ timeval\ *tv);}
+\DoxyCodeLine{00215\ \textcolor{comment}{/*\ solar.c\ */}}
+\DoxyCodeLine{00216\ \textcolor{keywordtype}{void}\ Calculate\_Solar\_Position(\textcolor{keywordtype}{double}\ time,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *solar\_vector);}
+\DoxyCodeLine{00217\ \textcolor{keywordtype}{int}\ Sat\_Eclipsed(\mbox{\hyperlink{structvector__t}{vector\_t}}\ *pos,\ \mbox{\hyperlink{structvector__t}{vector\_t}}\ *sol,\ \textcolor{keywordtype}{double}\ *depth);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ }
+
+\end{DoxyCode}

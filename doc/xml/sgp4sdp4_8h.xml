@@ -1,0 +1,1692 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="sgp4sdp4_8h" kind="file" language="C++">
+    <compoundname>sgp4sdp4.h</compoundname>
+    <includes local="no">math.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">sys/time.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">ctype.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>sgp4sdp4.h</label>
+        <link refid="sgp4sdp4_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ctype.h</label>
+      </node>
+      <node id="2">
+        <label>math.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="7">
+        <label>sys/time.h</label>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structtle__t" prot="public">tle_t</innerclass>
+    <innerclass refid="structgeodetic__t" prot="public">geodetic_t</innerclass>
+    <innerclass refid="structvector__t" prot="public">vector_t</innerclass>
+    <innerclass refid="structdeep__arg__t" prot="public">deep_arg_t</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="sgp4sdp4_8h_1a45acc2e7b473af8fcb48d80c73e9f0ca" prot="public" static="no">
+        <name>ALL_FLAGS</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="132" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1a628afa9cbeaee4a9c6d73abfcf938d09" prot="public" static="no">
+        <name>SGP_INITIALIZED_FLAG</name>
+        <initializer>0x000001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="133" column="10" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1a368903b589547337c50b334f19dac38f" prot="public" static="no">
+        <name>SGP4_INITIALIZED_FLAG</name>
+        <initializer>0x000002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="134" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1ad230e170e961da30767f09efe9d6f8b1" prot="public" static="no">
+        <name>SDP4_INITIALIZED_FLAG</name>
+        <initializer>0x000004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="135" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1a9c4e5a0857b7ef06ca52e79a89a711f9" prot="public" static="no">
+        <name>SGP8_INITIALIZED_FLAG</name>
+        <initializer>0x000008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="136" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1aa4eff2b7f8d32a41efa9c9fa9cc59c60" prot="public" static="no">
+        <name>SDP8_INITIALIZED_FLAG</name>
+        <initializer>0x000010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="137" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1a541c56afd5f5ba945d104fa94adaebdf" prot="public" static="no">
+        <name>SIMPLE_FLAG</name>
+        <initializer>0x000020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="138" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1ad0103d93831850508142e7391f1d676a" prot="public" static="no">
+        <name>DEEP_SPACE_EPHEM_FLAG</name>
+        <initializer>0x000040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="139" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1af926ff762d2965d06bc98c7231400d57" prot="public" static="no">
+        <name>LUNAR_TERMS_DONE_FLAG</name>
+        <initializer>0x000080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="140" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1a39553ba38ae728383cd21e0a5d5d8286" prot="public" static="no">
+        <name>NEW_EPHEMERIS_FLAG</name>
+        <initializer>0x000100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="141" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1a3be3d1561f6a962be372f43294b856f9" prot="public" static="no">
+        <name>DO_LOOP_FLAG</name>
+        <initializer>0x000200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="142" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1aecacc552c86c3945ae053c07a021377c" prot="public" static="no">
+        <name>RESONANCE_FLAG</name>
+        <initializer>0x000400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="143" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1a6ca1f59859a6d462229884e8aa7753a9" prot="public" static="no">
+        <name>SYNCHRONOUS_FLAG</name>
+        <initializer>0x000800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="144" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1a63e0d58a2848be820d69796b0095ebe7" prot="public" static="no">
+        <name>EPOCH_RESTART_FLAG</name>
+        <initializer>0x001000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="145" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1a891fdb0915d8cef45dbbb3b6b72a0224" prot="public" static="no">
+        <name>VISIBLE_FLAG</name>
+        <initializer>0x002000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="146" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sgp4sdp4_8h_1a0ffdc0d0ea4f9c2ee541eec1af3aa6fd" prot="public" static="no">
+        <name>SAT_ECLIPSED_FLAG</name>
+        <initializer>0x004000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="147" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="sgp4sdp4_8h_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="152" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="152" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1ab4b76c89c82d1bed0cec5314f3519e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SGP4</definition>
+        <argsstring>(double tsince, tle_t *tle, vector_t *pos, vector_t *vel)</argsstring>
+        <name>SGP4</name>
+        <param>
+          <type>double</type>
+          <declname>tsince</declname>
+        </param>
+        <param>
+          <type><ref refid="structtle__t" kindref="compound">tle_t</ref> *</type>
+          <declname>tle</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>vel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="154" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="154" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1aff8baa401686817ad36d47bae2162a83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SDP4</definition>
+        <argsstring>(double tsince, tle_t *tle, vector_t *pos, vector_t *vel)</argsstring>
+        <name>SDP4</name>
+        <param>
+          <type>double</type>
+          <declname>tsince</declname>
+        </param>
+        <param>
+          <type><ref refid="structtle__t" kindref="compound">tle_t</ref> *</type>
+          <declname>tle</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>vel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="155" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="155" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a1e99a6df818a3a7fc1fdd636c40f10f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Deep</definition>
+        <argsstring>(int ientry, tle_t *tle, deep_arg_t *deep_arg)</argsstring>
+        <name>Deep</name>
+        <param>
+          <type>int</type>
+          <declname>ientry</declname>
+        </param>
+        <param>
+          <type><ref refid="structtle__t" kindref="compound">tle_t</ref> *</type>
+          <declname>tle</declname>
+        </param>
+        <param>
+          <type><ref refid="structdeep__arg__t" kindref="compound">deep_arg_t</ref> *</type>
+          <declname>deep_arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="156" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="156" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1aa2e0839158923e0fa38c8732d78b06c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isFlagSet</definition>
+        <argsstring>(int flag)</argsstring>
+        <name>isFlagSet</name>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="157" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="157" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a7c1dcdbee935a7a8a13baf96374fe2a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isFlagClear</definition>
+        <argsstring>(int flag)</argsstring>
+        <name>isFlagClear</name>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="158" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="158" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1adcdab8f96dc4fdc2940749e527087245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetFlag</definition>
+        <argsstring>(int flag)</argsstring>
+        <name>SetFlag</name>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="159" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="159" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1af8818cdc8321dbcb7784dc643f334bdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClearFlag</definition>
+        <argsstring>(int flag)</argsstring>
+        <name>ClearFlag</name>
+        <param>
+          <type>int</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="160" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="160" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a5c42ac3395df7612519a1f1c49c13dd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Checksum_Good</definition>
+        <argsstring>(char *tle_set)</argsstring>
+        <name>Checksum_Good</name>
+        <param>
+          <type>char *</type>
+          <declname>tle_set</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="162" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="162" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1aabb901de9923004db9cb09ee07934460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Good_Elements</definition>
+        <argsstring>(char *tle_set)</argsstring>
+        <name>Good_Elements</name>
+        <param>
+          <type>char *</type>
+          <declname>tle_set</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="163" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="163" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a5608da46230cab2eef70e822f875467a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Convert_Satellite_Data</definition>
+        <argsstring>(char *tle_set, tle_t *tle)</argsstring>
+        <name>Convert_Satellite_Data</name>
+        <param>
+          <type>char *</type>
+          <declname>tle_set</declname>
+        </param>
+        <param>
+          <type><ref refid="structtle__t" kindref="compound">tle_t</ref> *</type>
+          <declname>tle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="164" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="164" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a52e8666d175371b0b111273780ace4fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Input_Tle_Set</definition>
+        <argsstring>(char *tle_file, tle_t *tle)</argsstring>
+        <name>Input_Tle_Set</name>
+        <param>
+          <type>char *</type>
+          <declname>tle_file</declname>
+        </param>
+        <param>
+          <type><ref refid="structtle__t" kindref="compound">tle_t</ref> *</type>
+          <declname>tle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="165" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="165" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1ab9597ddd417a55827e1164e7606632d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void select_ephemeris</definition>
+        <argsstring>(tle_t *tle)</argsstring>
+        <name>select_ephemeris</name>
+        <param>
+          <type><ref refid="structtle__t" kindref="compound">tle_t</ref> *</type>
+          <declname>tle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="166" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="166" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a8ef0d81127806d0ad30c1d8a54bcea63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sign</definition>
+        <argsstring>(double arg)</argsstring>
+        <name>Sign</name>
+        <param>
+          <type>double</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="168" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="168" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a45b077912cf5f0e781dc43647d60c80b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sqr</definition>
+        <argsstring>(double arg)</argsstring>
+        <name>Sqr</name>
+        <param>
+          <type>double</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="169" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="169" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1aae089f781dda29a384fcf8238952d210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Cube</definition>
+        <argsstring>(double arg)</argsstring>
+        <name>Cube</name>
+        <param>
+          <type>double</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="170" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="170" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a2ade52d3e5e92e01d9d12ba8e3a783c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Radians</definition>
+        <argsstring>(double arg)</argsstring>
+        <name>Radians</name>
+        <param>
+          <type>double</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="171" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="171" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a1b2bd968b2197a4b01869e0e2a19fc8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Degrees</definition>
+        <argsstring>(double arg)</argsstring>
+        <name>Degrees</name>
+        <param>
+          <type>double</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="172" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="172" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a27b7ccf10e6862c560e558e7a7c4a200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ArcSin</definition>
+        <argsstring>(double arg)</argsstring>
+        <name>ArcSin</name>
+        <param>
+          <type>double</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="173" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="173" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a7a3109341b53813db9564c431676bd3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ArcCos</definition>
+        <argsstring>(double arg)</argsstring>
+        <name>ArcCos</name>
+        <param>
+          <type>double</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="174" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="174" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a6c03d837bb05161f2d40992e8d1e6841" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Magnitude</definition>
+        <argsstring>(vector_t *v)</argsstring>
+        <name>Magnitude</name>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="175" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="175" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1ab0c40bbf944f7426f0ffab58617e0ab7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vec_Add</definition>
+        <argsstring>(vector_t *v1, vector_t *v2, vector_t *v3)</argsstring>
+        <name>Vec_Add</name>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="176" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="176" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1ab5bf4e27d5c5714aafd36d25a119ea1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vec_Sub</definition>
+        <argsstring>(vector_t *v1, vector_t *v2, vector_t *v3)</argsstring>
+        <name>Vec_Sub</name>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="177" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="177" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a8187facb09cce6f61d35c37654a8296a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Scalar_Multiply</definition>
+        <argsstring>(double k, vector_t *v1, vector_t *v2)</argsstring>
+        <name>Scalar_Multiply</name>
+        <param>
+          <type>double</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="178" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="178" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a40007603bdd561bc59959ee3ed283af4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Scale_Vector</definition>
+        <argsstring>(double k, vector_t *v)</argsstring>
+        <name>Scale_Vector</name>
+        <param>
+          <type>double</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="179" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="179" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a0e8b89beeca98395801314aa81635caf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Dot</definition>
+        <argsstring>(vector_t *v1, vector_t *v2)</argsstring>
+        <name>Dot</name>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="180" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="180" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a2db04ac946ad7dc9de3daccb3eaf9e10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Angle</definition>
+        <argsstring>(vector_t *v1, vector_t *v2)</argsstring>
+        <name>Angle</name>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="181" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="181" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1ac67fdbc264a3634c3c3f0b9a6ee3a202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cross</definition>
+        <argsstring>(vector_t *v1, vector_t *v2, vector_t *v3)</argsstring>
+        <name>Cross</name>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="182" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="182" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a53c8be9bea86a618c4541ce7f844f7d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Normalize</definition>
+        <argsstring>(vector_t *v)</argsstring>
+        <name>Normalize</name>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="183" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="183" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1ad056404528b9cca69fcd3394c2daaea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double AcTan</definition>
+        <argsstring>(double sinx, double cosx)</argsstring>
+        <name>AcTan</name>
+        <param>
+          <type>double</type>
+          <declname>sinx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>cosx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="184" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="184" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a57ee9efd6ee72db38ba425bedad03256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double FMod2p</definition>
+        <argsstring>(double x)</argsstring>
+        <name>FMod2p</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="185" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="185" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a776e330ceee67b690d03c9fa7fae8c20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Modulus</definition>
+        <argsstring>(double arg1, double arg2)</argsstring>
+        <name>Modulus</name>
+        <param>
+          <type>double</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arg2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="186" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="186" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a1af2ba4633d350c3da1a8ed238624bf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Frac</definition>
+        <argsstring>(double arg)</argsstring>
+        <name>Frac</name>
+        <param>
+          <type>double</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="187" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="187" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a15883bfc19c02c290cd6605abe2930e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Round</definition>
+        <argsstring>(double arg)</argsstring>
+        <name>Round</name>
+        <param>
+          <type>double</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="188" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="188" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a2d6bf26a96cbe9af9f9ac6f2e2c6677f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Int</definition>
+        <argsstring>(double arg)</argsstring>
+        <name>Int</name>
+        <param>
+          <type>double</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="189" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="189" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a5a03458ab58d57dc0ab24ef02987c0a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Convert_Sat_State</definition>
+        <argsstring>(vector_t *pos, vector_t *vel)</argsstring>
+        <name>Convert_Sat_State</name>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>vel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="190" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="190" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a9a1da9a9953ef4b16c6f78bae89bc42d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Calculate_User_PosVel</definition>
+        <argsstring>(double time, geodetic_t *geodetic, vector_t *obs_pos, vector_t *obs_vel)</argsstring>
+        <name>Calculate_User_PosVel</name>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeodetic__t" kindref="compound">geodetic_t</ref> *</type>
+          <declname>geodetic</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>obs_pos</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>obs_vel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="192" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="192" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1aebabcf7c8bff7be3179c290f1517638c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Calculate_LatLonAlt</definition>
+        <argsstring>(double time, vector_t *pos, geodetic_t *geodetic)</argsstring>
+        <name>Calculate_LatLonAlt</name>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeodetic__t" kindref="compound">geodetic_t</ref> *</type>
+          <declname>geodetic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="193" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="193" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a0d7e15d3023f1f3afe6470189bc29d49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Calculate_Obs</definition>
+        <argsstring>(double time, vector_t *pos, vector_t *vel, geodetic_t *geodetic, vector_t *obs_set)</argsstring>
+        <name>Calculate_Obs</name>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>vel</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeodetic__t" kindref="compound">geodetic_t</ref> *</type>
+          <declname>geodetic</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>obs_set</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="194" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="194" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1afad67b6536803772f37a312ff13cf536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Calculate_RADec</definition>
+        <argsstring>(double time, vector_t *pos, vector_t *vel, geodetic_t *geodetic, vector_t *obs_set)</argsstring>
+        <name>Calculate_RADec</name>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>vel</declname>
+        </param>
+        <param>
+          <type><ref refid="structgeodetic__t" kindref="compound">geodetic_t</ref> *</type>
+          <declname>geodetic</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>obs_set</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="195" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="195" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a185dab2672e6d163d90f69ba40a0f95a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Julian_Date_of_Epoch</definition>
+        <argsstring>(double epoch)</argsstring>
+        <name>Julian_Date_of_Epoch</name>
+        <param>
+          <type>double</type>
+          <declname>epoch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="197" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="197" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1add47373157ee6ec1a9eb7b0f8a6baa7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Epoch_Time</definition>
+        <argsstring>(double jd)</argsstring>
+        <name>Epoch_Time</name>
+        <param>
+          <type>double</type>
+          <declname>jd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="198" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="198" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1ae220c8aea3e8cbd3a6d0d32a6f00d011" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DOY</definition>
+        <argsstring>(int yr, int mo, int dy)</argsstring>
+        <name>DOY</name>
+        <param>
+          <type>int</type>
+          <declname>yr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="199" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="199" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1aa219e2bfbb37ff27d3dba758bc3b9cbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Fraction_of_Day</definition>
+        <argsstring>(int hr, int mi, int se, suseconds_t usec)</argsstring>
+        <name>Fraction_of_Day</name>
+        <param>
+          <type>int</type>
+          <declname>hr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>se</declname>
+        </param>
+        <param>
+          <type>suseconds_t</type>
+          <declname>usec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="200" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="200" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a00fd0cde25493f68c0da3d4e1d48be71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Calendar_Date</definition>
+        <argsstring>(double jd, struct tm *cdate)</argsstring>
+        <name>Calendar_Date</name>
+        <param>
+          <type>double</type>
+          <declname>jd</declname>
+        </param>
+        <param>
+          <type>struct tm *</type>
+          <declname>cdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="201" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="201" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a3eb6244a8aafa9211337a70931c28426" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Time_of_Day</definition>
+        <argsstring>(double jd, struct tm *cdate)</argsstring>
+        <name>Time_of_Day</name>
+        <param>
+          <type>double</type>
+          <declname>jd</declname>
+        </param>
+        <param>
+          <type>struct tm *</type>
+          <declname>cdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="202" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="202" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1aeca182dbd05e606f89807760d309ed8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Julian_Date</definition>
+        <argsstring>(struct tm *cdate, struct timeval *tv)</argsstring>
+        <name>Julian_Date</name>
+        <param>
+          <type>struct tm *</type>
+          <declname>cdate</declname>
+        </param>
+        <param>
+          <type>struct timeval *</type>
+          <declname>tv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="203" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="203" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1ab184be0eb79673d42419423b2866a905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Date_Time</definition>
+        <argsstring>(double julian_date, struct tm *cdate)</argsstring>
+        <name>Date_Time</name>
+        <param>
+          <type>double</type>
+          <declname>julian_date</declname>
+        </param>
+        <param>
+          <type>struct tm *</type>
+          <declname>cdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="204" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="204" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a26d03897e93462fca7fc42da23af48a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Check_Date</definition>
+        <argsstring>(struct tm *cdate)</argsstring>
+        <name>Check_Date</name>
+        <param>
+          <type>struct tm *</type>
+          <declname>cdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="205" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="205" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a4d8d4514d1c72614b56a94a9d210e619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct tm</type>
+        <definition>struct tm Time_to_UTC</definition>
+        <argsstring>(struct tm *cdate)</argsstring>
+        <name>Time_to_UTC</name>
+        <param>
+          <type>struct tm *</type>
+          <declname>cdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="206" column="9" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="206" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1ab4eb2f7552f90f491315fea055675de2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct tm</type>
+        <definition>struct tm Time_from_UTC</definition>
+        <argsstring>(struct tm *cdate)</argsstring>
+        <name>Time_from_UTC</name>
+        <param>
+          <type>struct tm *</type>
+          <declname>cdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="207" column="9" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="207" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a344ac21b414368c786ea36aee8494441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double JD_to_UTC</definition>
+        <argsstring>(double jt)</argsstring>
+        <name>JD_to_UTC</name>
+        <param>
+          <type>double</type>
+          <declname>jt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="208" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="208" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a12f2762ed649ba1dea30aa4e6ee60959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double JD_from_UTC</definition>
+        <argsstring>(double jt)</argsstring>
+        <name>JD_from_UTC</name>
+        <param>
+          <type>double</type>
+          <declname>jt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="209" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="209" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a1b2aca29f4b344a69ba894f1e060fac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Delta_ET</definition>
+        <argsstring>(double year)</argsstring>
+        <name>Delta_ET</name>
+        <param>
+          <type>double</type>
+          <declname>year</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="210" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="210" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a9d5455dae2238ee56c903ce005feda49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Julian_Date_of_Year</definition>
+        <argsstring>(double year)</argsstring>
+        <name>Julian_Date_of_Year</name>
+        <param>
+          <type>double</type>
+          <declname>year</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="211" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="211" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a7bfba3a7e526fde6c811a22cb7373e70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ThetaG</definition>
+        <argsstring>(double epoch, deep_arg_t *deep_arg)</argsstring>
+        <name>ThetaG</name>
+        <param>
+          <type>double</type>
+          <declname>epoch</declname>
+        </param>
+        <param>
+          <type><ref refid="structdeep__arg__t" kindref="compound">deep_arg_t</ref> *</type>
+          <declname>deep_arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="212" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="212" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a8d8b4db0345694679ecee408cbcc812c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ThetaG_JD</definition>
+        <argsstring>(double jd)</argsstring>
+        <name>ThetaG_JD</name>
+        <param>
+          <type>double</type>
+          <declname>jd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="213" column="8" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="213" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1a1ba692d585bbf9c69954eb41a59aae2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UTC_Calendar_Now</definition>
+        <argsstring>(struct tm *cdate, struct timeval *tv)</argsstring>
+        <name>UTC_Calendar_Now</name>
+        <param>
+          <type>struct tm *</type>
+          <declname>cdate</declname>
+        </param>
+        <param>
+          <type>struct timeval *</type>
+          <declname>tv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="214" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="214" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1af34cb8cf03bc4429c02a4632e4fb7316" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Calculate_Solar_Position</definition>
+        <argsstring>(double time, vector_t *solar_vector)</argsstring>
+        <name>Calculate_Solar_Position</name>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>solar_vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="216" column="6" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="216" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sgp4sdp4_8h_1ab3dc243a55176374c7e1735d1b371613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sat_Eclipsed</definition>
+        <argsstring>(vector_t *pos, vector_t *sol, double *depth)</argsstring>
+        <name>Sat_Eclipsed</name>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="structvector__t" kindref="compound">vector_t</ref> *</type>
+          <declname>sol</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="217" column="5" declfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" declline="217" declcolumn="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Header<sp/>file<sp/>for<sp/>kelso</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>KELSO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KELSO_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctype.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Two-line-element<sp/>satellite<sp/>orbital<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="structtle__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>epoch,<sp/>xndt2o,<sp/>xndd6o,<sp/>bstar,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>xincl,<sp/>xnodeo,<sp/>eo,<sp/>omegao,<sp/>xmo,<sp/>xno;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>catnr,<sp/><sp/></highlight><highlight class="comment">/*<sp/>Catalogue<sp/>Number<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>elset,<sp/><sp/></highlight><highlight class="comment">/*<sp/>Element<sp/>Set<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>revnum;<sp/></highlight><highlight class="comment">/*<sp/>Revolution<sp/>Number<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>sat_name[128],<sp/></highlight><highlight class="comment">/*<sp/>Satellite<sp/>name<sp/>string<sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>idesg[9];<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>International<sp/>Designator<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/><ref refid="structtle__t" kindref="compound">tle_t</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Geodetic<sp/>position<sp/>structure<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structgeodetic__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>lat,<sp/>lon,<sp/>alt,<sp/>theta;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/><ref refid="structgeodetic__t" kindref="compound">geodetic_t</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>General<sp/>three-dimensional<sp/>vector<sp/>structure<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structvector__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>x,<sp/>y,<sp/>z,<sp/>w;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Common<sp/>arguments<sp/>between<sp/>deep-space<sp/>functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structdeep__arg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Used<sp/>by<sp/>dpinit<sp/>part<sp/>of<sp/>Deep()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>eosq,sinio,cosio,betao,aodp,theta2,sing,cosg,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>betao2,xmdot,omgdot,xnodot,xnodp;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Used<sp/>by<sp/>dpsec<sp/>and<sp/>dpper<sp/>parts<sp/>of<sp/>Deep()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>xll,omgadf,xnode,em,xinc,xn,t;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Used<sp/>by<sp/>thetg<sp/>and<sp/>Deep()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>ds50;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/><ref refid="structdeep__arg__t" kindref="compound">deep_arg_t</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SGP4SDP4_CONSTANTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>de2ra<sp/><sp/><sp/><sp/>1.74532925E-2<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Degrees<sp/>to<sp/>Radians<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pi<sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.1415926535898<sp/></highlight><highlight class="comment">/*<sp/>Pi<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pio2<sp/><sp/><sp/><sp/><sp/>1.5707963267949<sp/></highlight><highlight class="comment">/*<sp/>Pi/2<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>x3pio2<sp/><sp/><sp/>4.71238898<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>3*Pi/2<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>twopi<sp/><sp/><sp/><sp/>6.2831853071796<sp/></highlight><highlight class="comment">/*<sp/>2*Pi<sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>e6a<sp/><sp/><sp/><sp/><sp/><sp/>1.0E-6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tothrd<sp/><sp/><sp/>6.6666667E-1<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>2/3<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xj2<sp/><sp/><sp/><sp/><sp/><sp/>1.0826158E-3<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>J2<sp/>Harmonic<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xj3<sp/><sp/><sp/><sp/><sp/>-2.53881E-6<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>J3<sp/>Harmonic<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xj4<sp/><sp/><sp/><sp/><sp/>-1.65597E-6<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>J4<sp/>Harmonic<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xke<sp/><sp/><sp/><sp/><sp/><sp/>7.43669161E-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xkmper<sp/><sp/><sp/>6.378135E3<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Earth<sp/>radius<sp/>km<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>xmnpda<sp/><sp/><sp/>1.44E3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Minutes<sp/>per<sp/>day<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ae<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ck2<sp/><sp/><sp/><sp/><sp/><sp/>5.413079E-4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ck4<sp/><sp/><sp/><sp/><sp/><sp/>6.209887E-7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>f<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.352779E-3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ge<sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.986008E5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>s<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.012229</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>qoms2t<sp/><sp/><sp/>1.880279E-09</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>secday<sp/><sp/><sp/>8.6400E4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Seconds<sp/>per<sp/>day<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>omega_E<sp/><sp/>1.0027379</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>omega_ER<sp/>6.3003879</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>zns<sp/><sp/><sp/><sp/><sp/><sp/>1.19459E-5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>c1ss<sp/><sp/><sp/><sp/><sp/>2.9864797E-6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>zes<sp/><sp/><sp/><sp/><sp/><sp/>1.675E-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>znl<sp/><sp/><sp/><sp/><sp/><sp/>1.5835218E-4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>c1l<sp/><sp/><sp/><sp/><sp/><sp/>4.7968065E-7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>zel<sp/><sp/><sp/><sp/><sp/><sp/>5.490E-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>zcosis<sp/><sp/><sp/>9.1744867E-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>zsinis<sp/><sp/><sp/>3.9785416E-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>zsings<sp/><sp/>-9.8088458E-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>zcosgs<sp/><sp/><sp/>1.945905E-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>zcoshs<sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>zsinhs<sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>q22<sp/><sp/><sp/><sp/><sp/><sp/>1.7891679E-6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>q31<sp/><sp/><sp/><sp/><sp/><sp/>2.1460748E-6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>q33<sp/><sp/><sp/><sp/><sp/><sp/>2.2123015E-7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>g22<sp/><sp/><sp/><sp/><sp/><sp/>5.7686396</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>g32<sp/><sp/><sp/><sp/><sp/><sp/>9.5240898E-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>g44<sp/><sp/><sp/><sp/><sp/><sp/>1.8014998</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>g52<sp/><sp/><sp/><sp/><sp/><sp/>1.0508330</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>g54<sp/><sp/><sp/><sp/><sp/><sp/>4.4108898</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>root22<sp/><sp/><sp/>1.7891679E-6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>root32<sp/><sp/><sp/>3.7393792E-7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>root44<sp/><sp/><sp/>7.3636953E-9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>root52<sp/><sp/><sp/>1.1428639E-7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>root54<sp/><sp/><sp/>2.1765803E-9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>thdt<sp/><sp/><sp/><sp/><sp/>4.3752691E-3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>rho<sp/><sp/><sp/><sp/><sp/><sp/>1.5696615E-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mfactor<sp/><sp/>7.292115E-5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sr<sp/><sp/><sp/><sp/><sp/><sp/><sp/>6.96000E5<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Solar<sp/>radius<sp/>-<sp/>kilometers<sp/>(IAU<sp/>76)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AU<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.49597870E8<sp/><sp/><sp/></highlight><highlight class="comment">/*Astronomical<sp/>unit<sp/>-<sp/>kilometers<sp/>(IAU<sp/>76)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Entry<sp/>points<sp/>of<sp/>Deep()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dpinit<sp/><sp/><sp/>1<sp/></highlight><highlight class="comment">/*<sp/>Deep-space<sp/>initialization<sp/>code<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dpsec<sp/><sp/><sp/><sp/>2<sp/></highlight><highlight class="comment">/*<sp/>Deep-space<sp/>secular<sp/>code<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dpper<sp/><sp/><sp/><sp/>3<sp/></highlight><highlight class="comment">/*<sp/>Deep-space<sp/>periodic<sp/>code<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Carriage<sp/>return<sp/>and<sp/>line<sp/>feed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CR<sp/><sp/>0x0A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LF<sp/><sp/>0x0D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Flow<sp/>control<sp/>flag<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALL_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>SGP_INITIALIZED_FLAG<sp/><sp/>0x000001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SGP4_INITIALIZED_FLAG<sp/><sp/>0x000002</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SDP4_INITIALIZED_FLAG<sp/><sp/>0x000004</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SGP8_INITIALIZED_FLAG<sp/><sp/>0x000008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SDP8_INITIALIZED_FLAG<sp/><sp/>0x000010</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIMPLE_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x000020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEEP_SPACE_EPHEM_FLAG<sp/><sp/>0x000040</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LUNAR_TERMS_DONE_FLAG<sp/><sp/>0x000080</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NEW_EPHEMERIS_FLAG<sp/><sp/><sp/><sp/><sp/>0x000100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DO_LOOP_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x000200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RESONANCE_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x000400</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYNCHRONOUS_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x000800</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EPOCH_RESTART_FLAG<sp/><sp/><sp/><sp/><sp/>0x001000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VISIBLE_FLAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x002000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAT_ECLIPSED_FLAG<sp/><sp/><sp/><sp/><sp/><sp/>0x004000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Funtion<sp/>prototypes<sp/>produced<sp/>by<sp/>cproto<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>main.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>sgp4sdp4.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SGP4(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tsince,<sp/><ref refid="structtle__t" kindref="compound">tle_t</ref><sp/>*tle,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*pos,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*vel);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SDP4(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tsince,<sp/><ref refid="structtle__t" kindref="compound">tle_t</ref><sp/>*tle,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*pos,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*vel);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Deep(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ientry,<sp/><ref refid="structtle__t" kindref="compound">tle_t</ref><sp/>*tle,<sp/><ref refid="structdeep__arg__t" kindref="compound">deep_arg_t</ref><sp/>*deep_arg);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isFlagSet(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isFlagClear(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetFlag(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ClearFlag(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>sgp_in.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Checksum_Good(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tle_set);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Good_Elements(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tle_set);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Convert_Satellite_Data(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tle_set,<sp/><ref refid="structtle__t" kindref="compound">tle_t</ref><sp/>*tle);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Input_Tle_Set(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tle_file,<sp/><ref refid="structtle__t" kindref="compound">tle_t</ref><sp/>*tle);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>select_ephemeris(<ref refid="structtle__t" kindref="compound">tle_t</ref><sp/>*tle);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>sgp_math.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Sign(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Sqr(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Cube(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Radians(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Degrees(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ArcSin(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ArcCos(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Magnitude(<ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Vec_Add(<ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v1,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v2,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v3);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Vec_Sub(<ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v1,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v2,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v3);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Scalar_Multiply(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v1,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v2);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Scale_Vector(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Dot(<ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v1,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v2);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Angle(<ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v1,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v2);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Cross(<ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v1,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v2,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v3);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Normalize(<ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*v);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>AcTan(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sinx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cosx);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>FMod2p(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Modulus(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg2);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Frac(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Round(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Int(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arg);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Convert_Sat_State(<ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*pos,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*vel);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>sgp_obs.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Calculate_User_PosVel(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time,<sp/><ref refid="structgeodetic__t" kindref="compound">geodetic_t</ref><sp/>*geodetic,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*obs_pos,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*obs_vel);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Calculate_LatLonAlt(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*pos,<sp/><ref refid="structgeodetic__t" kindref="compound">geodetic_t</ref><sp/>*geodetic);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Calculate_Obs(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*pos,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*vel,<sp/><ref refid="structgeodetic__t" kindref="compound">geodetic_t</ref><sp/>*geodetic,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*obs_set);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Calculate_RADec(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*pos,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*vel,<sp/><ref refid="structgeodetic__t" kindref="compound">geodetic_t</ref><sp/>*geodetic,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*obs_set);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>sgp_time.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Julian_Date_of_Epoch(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>epoch);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Epoch_Time(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>jd);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DOY(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>yr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dy);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Fraction_of_Day(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mi,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>se,<sp/>suseconds_t<sp/>usec);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Calendar_Date(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>jd,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>tm<sp/>*cdate);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Time_of_Day(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>jd,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>tm<sp/>*cdate);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Julian_Date(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>tm<sp/>*cdate,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timeval<sp/>*tv);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Date_Time(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>julian_date,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>tm<sp/>*cdate);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Check_Date(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>tm<sp/>*cdate);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>Time_to_UTC(struct<sp/>tm<sp/>*cdate);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>Time_from_UTC(struct<sp/>tm<sp/>*cdate);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>JD_to_UTC(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>jt);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>JD_from_UTC(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>jt);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Delta_ET(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>year);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Julian_Date_of_Year(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>year);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ThetaG(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>epoch,<sp/><ref refid="structdeep__arg__t" kindref="compound">deep_arg_t</ref><sp/>*deep_arg);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ThetaG_JD(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>jd);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UTC_Calendar_Now(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>tm<sp/>*cdate,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timeval<sp/>*tv);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>solar.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Calculate_Solar_Position(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*solar_vector);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Sat_Eclipsed(<ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*pos,<sp/><ref refid="structvector__t" kindref="compound">vector_t</ref><sp/>*sol,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*depth);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h"/>
+  </compounddef>
+</doxygen>

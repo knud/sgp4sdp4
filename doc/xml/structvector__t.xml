@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structvector__t" kind="struct" language="C++" prot="public">
+    <compoundname>vector_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvector__t_1a7df309cf48404764c17ba77f3841f732" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vector_t::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>vector_t::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="45" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvector__t_1ac4ed66a8c023bb60e9d8228524ac1609" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vector_t::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>vector_t::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="45" column="3" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvector__t_1a4bcbaed90b38c599c27bc09411070e52" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vector_t::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>vector_t::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="45" column="5" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvector__t_1a0449f4dbca8a3abfd35b23540137d3a8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vector_t::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <qualifiedname>vector_t::w</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="45" column="7" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>vector_t</label>
+        <link refid="structvector__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="42" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="43" bodyend="46"/>
+    <listofallmembers>
+      <member refid="structvector__t_1a0449f4dbca8a3abfd35b23540137d3a8" prot="public" virt="non-virtual"><scope>vector_t</scope><name>w</name></member>
+      <member refid="structvector__t_1a7df309cf48404764c17ba77f3841f732" prot="public" virt="non-virtual"><scope>vector_t</scope><name>x</name></member>
+      <member refid="structvector__t_1ac4ed66a8c023bb60e9d8228524ac1609" prot="public" virt="non-virtual"><scope>vector_t</scope><name>y</name></member>
+      <member refid="structvector__t_1a4bcbaed90b38c599c27bc09411070e52" prot="public" virt="non-virtual"><scope>vector_t</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

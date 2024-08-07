@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structtle__t" kind="struct" language="C++" prot="public">
+    <compoundname>tle_t</compoundname>
+    <includes refid="sgp4sdp4_8h" local="no">sgp4sdp4.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtle__t_1ae1006f0d841409e7aa4504e4103455b8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tle_t::epoch</definition>
+        <argsstring></argsstring>
+        <name>epoch</name>
+        <qualifiedname>tle_t::epoch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="23" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1a1b4c817d32de833a7314f65543e72c51" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tle_t::xndt2o</definition>
+        <argsstring></argsstring>
+        <name>xndt2o</name>
+        <qualifiedname>tle_t::xndt2o</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="23" column="7" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1aefaa3300d92eb2d606b46f7a84cd0c15" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tle_t::xndd6o</definition>
+        <argsstring></argsstring>
+        <name>xndd6o</name>
+        <qualifiedname>tle_t::xndd6o</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="23" column="14" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1adba9961c62203a03976e52990a5402ab" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tle_t::bstar</definition>
+        <argsstring></argsstring>
+        <name>bstar</name>
+        <qualifiedname>tle_t::bstar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="23" column="21" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1aba4cc95137fa9e3b65b8f143e6303dc5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tle_t::xincl</definition>
+        <argsstring></argsstring>
+        <name>xincl</name>
+        <qualifiedname>tle_t::xincl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="24" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1a1cb3459bd2018d2e67c5878f54e20708" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tle_t::xnodeo</definition>
+        <argsstring></argsstring>
+        <name>xnodeo</name>
+        <qualifiedname>tle_t::xnodeo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="24" column="7" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1a5c667884ed4cf4e4230af74aba78d412" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tle_t::eo</definition>
+        <argsstring></argsstring>
+        <name>eo</name>
+        <qualifiedname>tle_t::eo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="24" column="14" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1a1ca5e955dc367844809158046f3d91fa" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tle_t::omegao</definition>
+        <argsstring></argsstring>
+        <name>omegao</name>
+        <qualifiedname>tle_t::omegao</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="24" column="17" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1a5013ac420f5419ebb5837dbe0c91805a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tle_t::xmo</definition>
+        <argsstring></argsstring>
+        <name>xmo</name>
+        <qualifiedname>tle_t::xmo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="24" column="24" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1a010a65705be05e5e46922d634d8ead17" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tle_t::xno</definition>
+        <argsstring></argsstring>
+        <name>xno</name>
+        <qualifiedname>tle_t::xno</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="24" column="28" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1af3eaa0c9a7091b56baa4c995ea036f3b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tle_t::catnr</definition>
+        <argsstring></argsstring>
+        <name>catnr</name>
+        <qualifiedname>tle_t::catnr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="26" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1ac17297f0c26eaf3adb2d07a8ec3bdbd8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tle_t::elset</definition>
+        <argsstring></argsstring>
+        <name>elset</name>
+        <qualifiedname>tle_t::elset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="27" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1ab03e96fe2a36886ff9e91e238e2917d0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tle_t::revnum</definition>
+        <argsstring></argsstring>
+        <name>revnum</name>
+        <qualifiedname>tle_t::revnum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="28" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1ae300e006c1c41f6403fc939d89dec770" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char tle_t::sat_name[128]</definition>
+        <argsstring>[128]</argsstring>
+        <name>sat_name</name>
+        <qualifiedname>tle_t::sat_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="30" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtle__t_1aa20a3d35ff276b04e58da6b4e329c570" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char tle_t::idesg[9]</definition>
+        <argsstring>[9]</argsstring>
+        <name>idesg</name>
+        <qualifiedname>tle_t::idesg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="31" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Type definitions </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>tle_t</label>
+        <link refid="structtle__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="20" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="21" bodyend="32"/>
+    <listofallmembers>
+      <member refid="structtle__t_1adba9961c62203a03976e52990a5402ab" prot="public" virt="non-virtual"><scope>tle_t</scope><name>bstar</name></member>
+      <member refid="structtle__t_1af3eaa0c9a7091b56baa4c995ea036f3b" prot="public" virt="non-virtual"><scope>tle_t</scope><name>catnr</name></member>
+      <member refid="structtle__t_1ac17297f0c26eaf3adb2d07a8ec3bdbd8" prot="public" virt="non-virtual"><scope>tle_t</scope><name>elset</name></member>
+      <member refid="structtle__t_1a5c667884ed4cf4e4230af74aba78d412" prot="public" virt="non-virtual"><scope>tle_t</scope><name>eo</name></member>
+      <member refid="structtle__t_1ae1006f0d841409e7aa4504e4103455b8" prot="public" virt="non-virtual"><scope>tle_t</scope><name>epoch</name></member>
+      <member refid="structtle__t_1aa20a3d35ff276b04e58da6b4e329c570" prot="public" virt="non-virtual"><scope>tle_t</scope><name>idesg</name></member>
+      <member refid="structtle__t_1a1ca5e955dc367844809158046f3d91fa" prot="public" virt="non-virtual"><scope>tle_t</scope><name>omegao</name></member>
+      <member refid="structtle__t_1ab03e96fe2a36886ff9e91e238e2917d0" prot="public" virt="non-virtual"><scope>tle_t</scope><name>revnum</name></member>
+      <member refid="structtle__t_1ae300e006c1c41f6403fc939d89dec770" prot="public" virt="non-virtual"><scope>tle_t</scope><name>sat_name</name></member>
+      <member refid="structtle__t_1aba4cc95137fa9e3b65b8f143e6303dc5" prot="public" virt="non-virtual"><scope>tle_t</scope><name>xincl</name></member>
+      <member refid="structtle__t_1a5013ac420f5419ebb5837dbe0c91805a" prot="public" virt="non-virtual"><scope>tle_t</scope><name>xmo</name></member>
+      <member refid="structtle__t_1aefaa3300d92eb2d606b46f7a84cd0c15" prot="public" virt="non-virtual"><scope>tle_t</scope><name>xndd6o</name></member>
+      <member refid="structtle__t_1a1b4c817d32de833a7314f65543e72c51" prot="public" virt="non-virtual"><scope>tle_t</scope><name>xndt2o</name></member>
+      <member refid="structtle__t_1a010a65705be05e5e46922d634d8ead17" prot="public" virt="non-virtual"><scope>tle_t</scope><name>xno</name></member>
+      <member refid="structtle__t_1a1cb3459bd2018d2e67c5878f54e20708" prot="public" virt="non-virtual"><scope>tle_t</scope><name>xnodeo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

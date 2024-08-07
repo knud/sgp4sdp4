@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structgeodetic__t" kind="struct" language="C++" prot="public">
+    <compoundname>geodetic_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgeodetic__t_1abf2ed2adb5ab1884427dc360a35e9e59" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double geodetic_t::lat</definition>
+        <argsstring></argsstring>
+        <name>lat</name>
+        <qualifiedname>geodetic_t::lat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="38" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeodetic__t_1a7e82ac37de467eafa7a57d44c352ac01" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double geodetic_t::lon</definition>
+        <argsstring></argsstring>
+        <name>lon</name>
+        <qualifiedname>geodetic_t::lon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="38" column="5" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeodetic__t_1a3d618fc903380e9c4d6d2a9ea4ee7833" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double geodetic_t::alt</definition>
+        <argsstring></argsstring>
+        <name>alt</name>
+        <qualifiedname>geodetic_t::alt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="38" column="9" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeodetic__t_1aeb27dd8905744513031478bc9b6f15c7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double geodetic_t::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <qualifiedname>geodetic_t::theta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="38" column="13" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>geodetic_t</label>
+        <link refid="structgeodetic__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" line="35" column="1" bodyfile="/home/knud/Development/DopplerGeodesy/sgp4sdp4/include/sgp4sdp4.h" bodystart="36" bodyend="39"/>
+    <listofallmembers>
+      <member refid="structgeodetic__t_1a3d618fc903380e9c4d6d2a9ea4ee7833" prot="public" virt="non-virtual"><scope>geodetic_t</scope><name>alt</name></member>
+      <member refid="structgeodetic__t_1abf2ed2adb5ab1884427dc360a35e9e59" prot="public" virt="non-virtual"><scope>geodetic_t</scope><name>lat</name></member>
+      <member refid="structgeodetic__t_1a7e82ac37de467eafa7a57d44c352ac01" prot="public" virt="non-virtual"><scope>geodetic_t</scope><name>lon</name></member>
+      <member refid="structgeodetic__t_1aeb27dd8905744513031478bc9b6f15c7" prot="public" virt="non-virtual"><scope>geodetic_t</scope><name>theta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
