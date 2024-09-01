@@ -44,7 +44,6 @@ core_source_files = [
     'lib/sgp_obs.c',
     'lib/sgp_time.c',
     'lib/solar.c',
-#    'lib/tle_utils.c'
     ]
 
 
@@ -62,6 +61,14 @@ executable('example', 'src/example.c',
     )
 
 executable('range_rate', 'src/range_rate.c',
+    sources: core_source_files,
+    include_directories: incdir,
+    dependencies: [boost_dep, curl_dep],
+    #    link_with: ,
+    install: true,
+    )
+
+executable('range_rate_full_day', 'src/range_rate_full_day.c',
     sources: core_source_files,
     include_directories: incdir,
     dependencies: [boost_dep, curl_dep],

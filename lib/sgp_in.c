@@ -17,8 +17,6 @@
 #define SGP4SDP4_CONSTANTS
 #include "sgp4sdp4.h"
 
-#define UNUSED(expr) do { (void)(expr); } while (0)
-
 /* Calculates the checksum mod 10 of a line from a TLE set and */
 /* returns 1 if it compares with checksum in column 68, else 0.*/
 /* tle_set is a character string holding the two lines read    */

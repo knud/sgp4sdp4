@@ -17,6 +17,8 @@
 #include <ctype.h>
 #include <stdint.h>
 
+#define UNUSED(expr) do { (void)(expr); } while (0)
+
 /** Type definitions **/
 
 /* Two-line-element satellite orbital data */
@@ -152,7 +154,7 @@ typedef struct
 
 /* Funtion prototypes produced by cproto */
 /* main.c */
-int main(void);
+//int main(void);
 /* sgp4sdp4.c */
 void SGP4(double tsince, tle_t *tle, vector_t *pos, vector_t *vel);
 void SDP4(double tsince, tle_t *tle, vector_t *pos, vector_t *vel);

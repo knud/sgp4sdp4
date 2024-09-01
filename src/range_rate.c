@@ -18,8 +18,6 @@
 #define __USE_XOPEN
 #include <math.h>
 
-#include "include/tle_utils.h"
-
 /* Main program */
 int main(void)
 {
@@ -188,6 +186,7 @@ int main(void)
 	sun_azi = Degrees(solar_set.x);
 	sun_ele = Degrees(solar_set.y);
 
+  if (sat_ele > 1) {
 	printf("\n Date: %02d/%02d/%04d UTC: %02d:%02d:%02d  Ephemeris: %s"
 		"\n Azi=%6.1f Ele=%6.1f Range=%8.1f Range Rate=%6.2f"
 		"\n Lat=%6.1f Lon=%6.1f  Alt=%8.1f  Vel=%8.3f"
@@ -199,7 +198,7 @@ int main(void)
 		sat_lat, sat_lon, sat_alt, sat_vel,
 		sat_status, eclipse_depth,
 		sun_azi, sun_ele);
-
+	}
     // delay until next orbital parameter update
     nanosleep(&delay, NULL);
   }  // while
